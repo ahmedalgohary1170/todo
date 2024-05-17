@@ -1,0 +1,12 @@
+
+
+<form method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">add</button>
+</form>
+{% for object in object_list  %}
+    <p><a href="list/{{object.id}}">{{object.title}}</a></p>
+
+
+{% endfor %}
